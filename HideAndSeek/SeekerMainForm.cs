@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HideAndSeek
 {
-	public partial class Form1 : Form
+	public partial class SeekerMainForm : Form
 	{
-		public Form1()
+		public SeekerMainForm()
 		{
 			InitializeComponent();
 		}
