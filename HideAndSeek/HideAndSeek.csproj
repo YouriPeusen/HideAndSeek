@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DataLayer.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\Hider.cs" />
     <Compile Include="Model\History.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\Seeker.cs" />
+    <Compile Include="Views\CamerasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CamerasForm.Designer.cs">
+      <DependentUpon>CamerasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\HiderMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +102,9 @@
     <Compile Include="Views\StatisticsForm.Designer.cs">
       <DependentUpon>StatisticsForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\HiderMainForm.resx">
+      <DependentUpon>HiderMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\SeekerMainForm.resx">
       <DependentUpon>SeekerMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,8 +133,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

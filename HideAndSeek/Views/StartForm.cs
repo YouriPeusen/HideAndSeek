@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HideAndSeek.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +34,11 @@ namespace HideAndSeek
 
 		private void btnHider_Click(object sender, EventArgs e)
 		{
+			this.Hide();
 
+			HiderMainForm form = new HiderMainForm();
+			form.Closed += (s, args) => this.Close();
+			form.Show();
 		}
 	}
 }
