@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace HideAndSeek.Model
 {
-	class Game
+	public class Game
 	{
+		public int GameId { get; set; }
+		public TimeSpan TimeLimit { get; set; }
+		public Player Hider { get; set; }
+		public Player Seeker { get; set; }
 	}
 }

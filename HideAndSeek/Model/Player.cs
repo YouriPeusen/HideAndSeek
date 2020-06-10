@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace HideAndSeek.Model
 {
-	class Player
+	abstract public class Player
 	{
+		public int PlayerId { get; set; }
+		public int Role { get; set; }
+		public bool Winner { get; set; }
+
+		public void ViewGameStats(int gameId)
+		{
+
+		}
+
+		public void ViewGameHistorys()
+		{
+
+		}
+
+		public void SelectRole()
+		{
+
+		}
 	}
 }
