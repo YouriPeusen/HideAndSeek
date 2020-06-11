@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnShowFloorplan = new System.Windows.Forms.Button();
 			this.btnSettings = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
 			this.btnCameras = new System.Windows.Forms.Button();
 			this.btnGameHistory = new System.Windows.Forms.Button();
 			this.lblTimer = new System.Windows.Forms.Label();
+			this.Timer = new System.Windows.Forms.Timer(this.components);
 			this.SuspendLayout();
 			// 
 			// label1
@@ -119,12 +121,17 @@
 			// 
 			this.lblTimer.AutoSize = true;
 			this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTimer.Location = new System.Drawing.Point(440, 9);
+			this.lblTimer.Location = new System.Drawing.Point(421, 11);
 			this.lblTimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.lblTimer.Name = "lblTimer";
-			this.lblTimer.Size = new System.Drawing.Size(149, 39);
+			this.lblTimer.Size = new System.Drawing.Size(168, 39);
 			this.lblTimer.TabIndex = 7;
-			this.lblTimer.Text = "00:00:00";
+			this.lblTimer.Text = "00:00.000";
+			// 
+			// Timer
+			// 
+			this.Timer.Interval = 1;
+			this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
 			// 
 			// SeekerMainForm
 			// 
@@ -142,6 +149,7 @@
 			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 			this.Name = "SeekerMainForm";
 			this.Text = "SeekerMainForm";
+			this.Load += new System.EventHandler(this.SeekerMainForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -157,5 +165,6 @@
 		private System.Windows.Forms.Button btnCameras;
 		private System.Windows.Forms.Button btnGameHistory;
 		private System.Windows.Forms.Label lblTimer;
+		private System.Windows.Forms.Timer Timer;
 	}
 }
