@@ -16,5 +16,19 @@ namespace HideAndSeek.Views
 		{
 			InitializeComponent();
 		}
+
+		private void btnReturn_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+
+			SeekerMainForm form = new SeekerMainForm();
+			form.Closed += (s, args) => this.Close();
+			form.Show();
+		}
+
+		private void btnSave_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
